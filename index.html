@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Legion</title>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+  <link href="app.css" rel="stylesheet" title="Application Style">
+</head>
+<body ng-app="legionApp" layout="column" ng-cloak>
+  <!-- Header -->
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      Legion: A Gems of War deck and team manager
+    </div>
+  </md-toolbar>
+
+  <!-- Tabs -->
+
+  <md-tabs layout="column" flex>
+
+    <!-- Deck Tab -->
+
+    <md-tab label="Deck">
+
+      <!-- Filter Options -->
+
+      <md-sidenav
+          class="md-sidenav-left md-whiteframe-z2"
+          md-component-id="left"
+          md-is-locked-open="$mdMedia('gt-sm')">
+        <md-content layout-padding>
+          Card Filter Options
+        </md-content>
+      </md-sidenav>
+
+      <md-content layout="row" layout-padding layout-wrap ng-controller="DeckCtrl as vm" flex>
+
+        <md-card ng-repeat="troop in vm.troops" ng-cloak>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">{{ troop.name }}</span>
+              <span class="md-subhead">{{ troop.rarity }}</span>
+            </md-card-title-text>
+            <div class="stats" layout="column">
+              <div layout="row">
+                <span class="img-attack">{{ vm.getRange(troop.stats.attack) }}</span>
+                <span class="img-magic">{{ vm.getRange(troop.stats.magic) }}</span>
+              </div>
+              <div layout="row">
+                <span class="img-armor">{{ vm.getRange(troop.stats.armor) }}</span>
+                <span class="img-life">{{ vm.getRange(troop.stats.life) }}</span>
+              </div>
+
+            </div>
+            <md-card-title-media>
+              <img src="{{ troop.image }}">
+            </md-card-title-media>
+          </md-card-title>
+          <md-card-actions layout="row" layout-align="end center">
+            <md-button>Action 1</md-button>
+            <md-button>Action 2</md-button>
+          </md-card-actions>
+        </md-card>
+
+      </md-content>
+
+    </md-tab>
+
+    <!-- Teams Tab -->
+
+    <md-tab label="Teams">
+      <md-content>
+        <h1 class="md-display-2">My Teams</h1>
+        <p>Show my teams here</p>
+      </md-content>
+    </md-tab>
+  </md-tabs>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+  <!-- App Scripts -->
+  <script type="text/javascript" src="troops.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

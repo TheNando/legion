@@ -1,0 +1,53 @@
+md-tab-content[id="tab-content-0"], div[md-tabs-template] {
+    display: flex;
+    flex: 1;
+}
+
+md-card {
+    width: 500px;
+}
+
+md-card-title-media img {
+    max-height: 128px;
+    max-width: 128px;
+    border-radius: 16px;
+}
+
+.stats {
+    margin-top: -12px;
+}
+
+.stats span {
+    margin: 8px 6px;
+    width: 52px;
+    height: 52px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 1px 1px 3px black, -1px -1px 3px black, 0 0 3px black, 0 0 3px black;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 48px;
+}
+.img-attack {
+    background-image: url('assets/attack.png');
+}
+
+.img-magic {
+    background-image: url('assets/magic.png');
+}
+
+.img-armor {
+    background-image: url('assets/armor.png');
+}
+
+.img-life {
+    background-image: url('assets/life.png');
+}
+
+img.desaturate {
+    filter: grayscale(100%);
+}
+
