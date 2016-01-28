@@ -43,17 +43,17 @@
             </md-card-title-text>
             <div class="stats" layout="column">
               <div layout="row">
-                <span class="img-attack">{{ vm.getRange(troop.stats.attack) }}</span>
-                <span class="img-magic">{{ vm.getRange(troop.stats.magic) }}</span>
+                <span class="sprite sprite-attack">{{ vm.getRange(troop.stats.attack) }}</span>
+                <span class="sprite sprite-magic">{{ vm.getRange(troop.stats.magic) }}</span>
               </div>
               <div layout="row">
-                <span class="img-armor">{{ vm.getRange(troop.stats.armor) }}</span>
-                <span class="img-life">{{ vm.getRange(troop.stats.life) }}</span>
+                <span class="sprite sprite-armor">{{ vm.getRange(troop.stats.armor) }}</span>
+                <span class="sprite sprite-life">{{ vm.getRange(troop.stats.life) }}</span>
               </div>
 
             </div>
             <md-card-title-media>
-              <img src="{{ troop.image }}">
+              <img ng-src="{{ troop.image }}">
             </md-card-title-media>
           </md-card-title>
           <span>{{ troop.spell.description }}</span>

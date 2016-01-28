@@ -31,23 +31,73 @@ md-card-title-media img {
     text-align: center;
     line-height: 48px;
 }
-.img-attack {
-    background-image: url('assets/attack.png');
+
+/* Generated with http://www.spritecow.com/ */
+.sprite {
+    background-image: url('assets/sprites.png');
+    background-repeat: no-repeat;
 }
 
-.img-magic {
-    background-image: url('assets/magic.png');
+.sprite.sprite-attack {
+    background-position: -815px -990px;
+	width: 135px;
+	height: 120px;
 }
 
-.img-armor {
-    background-image: url('assets/armor.png');
+.sprite.sprite-magic {
+    background-position: -816px -869px;
+	width: 117px;
+	height: 119px;
 }
 
-.img-life {
-    background-image: url('assets/life.png');
+.sprite.sprite-armor {
+    background-position: -816px -1301px;
+	width: 116px;
+	height: 150px;
+}
+
+.sprite.sprite-life {
+	background-position: -686px -1009px;
+	width: 127px;
+	height: 140px;
+}
+
+.sprite.sprite-yellow {
+    background-position: -1222px -1302px;
+	width: 113px;
+	height: 119px;
+}
+
+.sprite.sprite-purple {
+    background-position: -1344px -1424px;
+	width: 113px;
+	height: 119px;
+}
+
+.sprite.sprite-brown {
+    background-position: -1466px -1424px;
+	width: 113px;
+	height: 119px;
+}
+
+.sprite.sprite-blue {
+    background-position: -1260px -1790px;
+	width: 113px;
+	height: 119px;
+}
+
+.sprite.sprite-green {
+    background-position: -1138px -1830px;
+	width: 113px;
+	height: 119px;
+}
+
+.sprite.sprite-red {
+    background-position: -1822px -1397px;
+	width: 113px;
+	height: 119px;
 }
 
 img.desaturate {
     filter: grayscale(100%);
 }
-
